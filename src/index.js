@@ -1,15 +1,25 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import dva from 'dva';
+import router from './router.js';
 import './index.css';
-import App from './App';
+import registerModels from '../src/model/index';
 import * as serviceWorker from './serviceWorker';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+// 1.定义app
+const app = dva({
+  initialState: {},
+  onError(e){
+    console.log('dva_onError', e);
+  }
+})
+
+// 2. 注册数据模型
+registerModels(app)
+
+// 3. 注册路由
+app.router(router)
+
+// 4. 挂载在root上
+app.start('#root')
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
