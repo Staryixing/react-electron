@@ -5,11 +5,38 @@
   "main": "main.js",
   "scripts": {
     "electron": "electron .",
+    "postinit": "electron-rebuild",
+    "pack": "electron-builder",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "yx",
-  "license": "ISC", 
+  "license": "ISC",
+  "build": {
+    "appId": "myApp",
+    "productName": "myApp",
+    "asar": false,
+    "directories": {
+      "output": "OutApp"
+    },
+    "mac": {
+      "target": [
+        "dmg",
+        "zip"
+      ]
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "zip"
+      ]
+    }
+  },
   "dependencies": {
-    "electron": "^10.1.3"
+    "electron-updater": "^4.3.5"
+  },
+  "devDependencies": {
+    "electron": "^10.1.3",
+    "electron-builder": "^22.9.1",
+    "electron-rebuild": "^2.3.2"
   }
 }

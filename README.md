@@ -15,8 +15,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 9. 边界错误处理
 
 1. 增加electron 并分开代码
+2. 下载 electron -D
+3. 下载 electron-builder 打包
 
 
 ## 项目启动
+  ### react项目
   1. npm start
   2. npm run build
+  ### electron 项目
+  1. npm run electron 启动
+  2. npm run pack 打包（mac）

@@ -12,6 +12,7 @@
 # production
 /build
 /exe/render
+/exe/OutApp
 
 # misc
 .DS_Store

@@ -1,5 +1,4 @@
 const { override, fixBabelImports, addLessLoader } = require('customize-cra')
-const Webpack = require('webpack');
 const path = require('path');
 
 // 配置打包路径
@@ -16,6 +15,11 @@ let configAlias = function(config){
   config.resolve.alias = Object.assign(config.resolve.alias, { 
     "@": path.resolve(__dirname, 'src')
   })
+  // 配置打包后获取文件为相对路径
+  if ('production' === config.mode) {
+    config.output.publicPath = './';
+    config.devtool='none'
+  }
   return config;
 }
 // 配置css-module
