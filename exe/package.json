@@ -1,0 +1,15 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "打包成exe",
+  "main": "main.js",
+  "scripts": {
+    "electron": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "yx",
+  "license": "ISC", 
+  "dependencies": {
+    "electron": "^10.1.3"
+  }
+}

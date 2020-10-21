@@ -1,6 +1,11 @@
 const { override, fixBabelImports, addLessLoader } = require('customize-cra')
 const Webpack = require('webpack');
 const path = require('path');
+
+// 配置打包路径
+const paths = require('react-scripts/config/paths');
+paths.appBuild = path.join(path.dirname(paths.appBuild),'./exe/render')
+
 /**
  * 1、配置less，css-module
  * 2、配置antd按需加载，修改主题样式
@@ -8,8 +13,7 @@ const path = require('path');
  * 
  */
 let configAlias = function(config){
-  console.log('config', config);
-  config.resolve.alias = Object.assign(config.resolve.alias, {
+  config.resolve.alias = Object.assign(config.resolve.alias, { 
     "@": path.resolve(__dirname, 'src')
   })
   return config;

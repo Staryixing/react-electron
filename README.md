@@ -14,6 +14,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 8. websocket  
 9. 边界错误处理
 
+1. 增加electron 并分开代码
+
+
 ## 项目启动
   1. npm start
   2. npm run build
