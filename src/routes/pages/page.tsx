@@ -4,7 +4,7 @@ class Page extends React.Component{
   
   render(){
     return <div>
-      w
+      页面
     </div>
   }
 }

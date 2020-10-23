@@ -10,8 +10,8 @@ class HomePage extends React.Component{
       <Button type="primary">启动</Button>
       <Page />
       <ul>
-        <li>1</li>
         <li>2</li>
+        <li>3</li>
       </ul>
     </div>
   }
