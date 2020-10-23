@@ -26,3 +26,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
   ### electron 项目
   1. npm run electron 启动
   2. npm run pack 打包（mac）
+  3. npm run pack-win 打包（window）
+    #### electron 热更新（window）
+    1. 在exe/package.json中填写服务器url地址
+    2. 将打包后生成的latest.yml 和 exe文件上传到服务器地址中
