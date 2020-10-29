@@ -21,9 +21,9 @@ function updaterHandle(){
   autoUpdater.on("updater-available", function(){
     sendUpdaterMessage(message.updateNotAva)
   })
-  autoUpdater.on("download-progress", function(progressObj){
-    winRemote.webContents.send("downloadProgress", progressObj)
-  })
+  // autoUpdater.on("download-progress", function(progressObj){
+  //   winRemote.webContents.send("downloadProgress", progressObj)
+  // })
   autoUpdater.on("update-downloaded", function(){
     ipcMain.on("isUpdateNow",()=> {
       console.log('start updater');
