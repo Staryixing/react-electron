@@ -4,7 +4,7 @@ class Page extends React.Component{
   
   render(){
     return <div>
-      版本3.0
+      版本4.0
     </div>
   }
 }
