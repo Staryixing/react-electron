@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './homePage.less';
-import Page from './pages/page';
+import Page from './pages/page.jsx';
 import { Button } from 'antd';
 let GIpcRenderer
 if(window.require){
